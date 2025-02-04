@@ -4,4 +4,23 @@
     width: 400px; /* Set a fixed width */
     height: 400px; /* Set a fixed height */
     border: 2px solid black;
+
+}
+
+.square {
+    background-color: yellow;
+    border : 1px solid black
+}
+
+
+.square:hover {
+    background-color: red;
+}
+
+button {
+    width: 100px;
+    height: 25px;
+    border-radius: 10%;
+    margin: 10px;
+    background-color:rgb(134, 138, 217);
 }

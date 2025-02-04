@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<button>Click Me</button>
 <div class = "container">
    
 </div>
@@ -14,24 +15,42 @@
 <script>
     
     const container = document.querySelector(".container")
-    const gridSize = 16;
-    const squareSize = 100/gridSize;
+    let gridSize = 16;
+
    
+const calculateGrid = () => {
+    container.innerHTML = ""
 
+    let userInput = prompt('How many squares?');
+    userInput = Number(userInput);
+
+
+if (isNaN(userInput) || userInput < 1 || userInput > 100)  {
+            alert("Invalid input! Please enter a number between 1 and 100.");
+            return;  // Exit if input is invalid
+        }
+
+    gridSize = userInput;
+ 
+    let squareSize = 400/gridSize;
+    
     for (let i=0; i<gridSize * gridSize; i++) {
-
     const square = document.createElement("div")
-    square.style.width = `${squareSize}%`;
-    square.style.height = `${squareSize}%`;
+    square.classList.add("square");
+    square.style.width = `${squareSize}px`;
+    square.style.height = `${squareSize}px`;
     square.style.boxSizing = "border-box";
-    square.style.border = "1px solid black";
+ 
+
+
     container.appendChild(square);
 
-    } 
+  
 
+    }}
 
-
-
+    const button = document.querySelector("button")
+    button.addEventListener("click", calculateGrid)
 
 </script>
     
