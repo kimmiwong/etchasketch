@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class = "container">
+   
+</div>
+
+<script>
+    
+    const container = document.querySelector(".container")
+    const gridSize = 16;
+    const squareSize = 100/gridSize;
+   
+
+    for (let i=0; i<gridSize * gridSize; i++) {
+
+    const square = document.createElement("div")
+    square.style.width = `${squareSize}%`;
+    square.style.height = `${squareSize}%`;
+    square.style.boxSizing = "border-box";
+    square.style.border = "1px solid black";
+    container.appendChild(square);
+
+    } 
+
+
+
+
+
+</script>
+    
+</body>
+</html>
